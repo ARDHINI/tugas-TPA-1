@@ -86,7 +86,6 @@ nav ul li a:hover::after{
     font-weight: 700;
     margin-bottom:20px;
 }
-
 span{
     color: #fff;
 }
@@ -102,6 +101,11 @@ span{
     color:#fd4766;
     display: inline-block;
     margin: 30px 0;
+    transition: 0.5s;
+}
+.content a:hover{
+    background:#fd4766;
+    color: #fff;
 }
 .images{
     width: 45%;
@@ -155,6 +159,57 @@ body
     100%
     {
         transform: translateY(-10vh) scale(1);
+    }
+}
+
+.profil-box{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 12vh;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    margin-top: 47px;
+    left:970px;
+    width: 285px;
+    height: 287px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.picturebox{
+    position: absolute;
+    top: -137px;
+    left: -15px;
+    width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.profil-box:before{
+    content:'';
+    position:absolute;
+    inset: -10px 140px;
+    background: linear-gradient(315deg,#00ccff,#d400d4);
+    transition: 0.5s;
+    animation: profile-animate 4s linear infinite;
+}
+.profil-box:hover:before{
+    inset: -20px 0px;
+}
+
+@keyframes profil-animate{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    0%{
+        transform:rotate(360deg);
     }
 }
 
@@ -296,26 +351,20 @@ h3{
 
 
 
-
 .Blog
 .servis{
-    background-color: #fff;
     width: 100%;
     padding:100px 0px;
 }
-.blog-heading h3{
-    color:white;
-    font-size: 75px;
-    width: 1130px;
-    margin:30px auto;
-    text-align: center;
+.blog-tittle{
+    background-color: #fff;   
 }
-.blog-heading span{
-    color: #4fc3dc;
-    font-size: 30px;
+.blog-heading h3{
+    background-color: #fff;
+    font-size: 60px;
     width: 1130px;
-    margin:30px auto;
-    margin-left: 570px;
+    margin:0px auto;
+    padding: 60px;
     text-align: center;
 }
 .blog-card{
@@ -323,19 +372,20 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 10vh;
 }
 
 .grid{
     display: grid;
-    width: 114em;
-    grid-gap: 6rem;
-    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    width: 70em;
+    padding: 3rem;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
     align-items: start;
 }
 .grid-item{
     background-color: #fff;
-    border-radius: 0.4rem;
+    border-radius: 0.16rem;
     overflow: hidden;
     box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
     cursor:pointer;
@@ -347,22 +397,22 @@ h3{
 }
 .card-img{
     display: block;
-    width: 100%;
-    height: 20rem;
+    width: 30%;
+    height: 5rem;
     object-fit: cover;
 }
 .card-content{
-    pading: 3rem;
+    padding: 3rem;
 }
 .card-header{
-    font-size:3rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 300;
     color: #0d0d0d;
     margin-bottom: 1.5rem;
 }
 
 .card-text{
-    font-size: 1.6rem;
+    font-size: 1.0rem;
     letter-spacing: 0,1rem;
     line-height: 1.7;
     color: #3d3d3d;
@@ -371,8 +421,8 @@ h3{
 .card-btn{
     display: block;
     width: 100%;
-    padding: 1.5rem;
-    font-size: 2rem;
+    padding: 0.5rem;
+    font-size: 1rem;
     text-align: center;
     color: #3363ff;
     background-color: #d8e0fd;
@@ -406,32 +456,42 @@ h3{
 
 
 
-
 .Porotofolio
+.Ptf-title{
+    background-color: #fff;
+}
 .Project{
     background-color: #fff;
-    width: 100%;
-    padding:100px 0px;
+    padding: 20px;
 }
 .Project h3{
-    color:white;
-    font-size: 75px;
+    color:black;
+    font-size: 60px;
     width: 1130px;
-    margin:30px auto;
+    margin:0px auto;
+    padding: 30px;
     text-align: center;
 }
 .Project span{
     color: #4fc3dc;
-    font-size: 30px;
+    font-size: 25px;
     width: 1130px;
-    margin:30px auto;
-    margin-left: 500px;
+    margin:-20px auto;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    margin-left: 510px;
     text-align: center;
 }
-
-
-
-
+.xxx{
+    background-color: #fff;
+    margin:50% auto;
+    margin-top: -100px;
+    margin-bottom: 20px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
 .Photo-img{
     margin: 100px;
     display: flex;
@@ -453,3 +513,208 @@ h3{
     transform: scale(1.3);
     z-index: 2;
 }
+
+
+
+
+.contact
+.contactinfo{
+    position:relative;
+    min-height: 100vh;
+    padding:50px 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background: white;
+}
+.contactinfo title{
+    max-width: 800px;
+    text-align: center;
+}
+.contactinfo .title h2{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+.contactinfo .title p{
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: 300;
+}
+.Contactsosmed{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 100px;
+}
+.Contactsosmed .inform{
+    width: 30%;
+    display: flex;
+    min-height: 0px;
+    flex-direction: column;
+    margin-right: 8px ;
+}
+.box-box-box{
+    position: relative;
+    margin-top: 30px;
+    padding: 20px;
+}
+.Contactsosmed .inform .boxxxxxxxx{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    cursor: pointer;
+}
+.Contactsosmed .inform .boxxxxxxxx .iconn{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75em;
+    transition: 0.5s;
+}
+.Contactsosmed .inform .boxxxxxxxx:hover .iconn{
+    background: #00bcd4;
+    color: #fff;
+}
+.Contactsosmed .inform .boxxxxxxxx .iconn .textt{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+}
+.textt h3{
+    font-weight: 500;
+    color: #00bcd4;
+    margin-left: 20px;
+}
+.textt p{
+    font-size: medium;
+    color: white;
+    margin-left: 20px;
+}
+.Contactsosmed .inform .txt{
+    color:#fff;
+    margin-top: 50px;
+    font-weight: 100;
+    padding-left: 10px;
+    border-left: 50px solid #e91e63;
+    line-height: 1em;
+}
+.box-text{
+    position: relative;
+    margin-top: -70px;
+    padding: 20px;
+}
+.sci{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    color: #fff;
+    font-size: 2em;
+    transition: 0.5s;
+}
+.sci li a:hover{
+    color: #00bcd4;
+}
+.contactForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactForm form{
+    width: 670PX;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+    margin-right: 90PX;
+}
+.contactForm form h2{
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+.contactForm form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+
+.contactForm form input::placeholder{
+    color: #ddd;
+}
+.contactForm form #lastName,
+.contactForm form #mobilephone{
+    margin-left: 20px;
+} 
+.contactForm form h4{
+    color: #fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+.contactForm form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    min-height: 80px;
+}
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+textarea::-webkit-scrollbar-thum{
+    background-color: rgba(194,194,194,0.713);
+}
+.contactForm form #button{
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #3333;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+.container form #button:hover{
+    opacity: 0.7;
+}
+
